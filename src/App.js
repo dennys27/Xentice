@@ -5,6 +5,14 @@ import ServicesBar from "./Components/ServiceBar/ServicesBar";
 import axios from 'axios'
 import Carousel from "./Components/crousel/Carousel";
 import { useEffect, useState } from "react";
+import CommercialOffice from "./Components/CommercialOffice/CommercialOffice";
+import CommercialLand from "./Components/CommercialLand/CommercialLand";
+import CommercialBuilding from "./Components/Commercial Building/CommercialBuilding";
+import IndustrialBuilding from "./Components/IndustrialBuilding/IndustrialBuilding";
+import CoWorkingSpace from "./Components/CoworkingSpace/CoWorkingSpace";
+import PrivateOffice from "./Components/PrivateOffice/PrivateOffice";
+import MeetingRoom from "./Components/MeetingRoom/MeetingRoom";
+import Footer from "./Components/Footer/Footer";
 
 
 
@@ -17,12 +25,8 @@ function App() {
     axios.get("https://api.xentice.com/api/postadSelect")
       .then((data) => {
       
-        setData(JSON.parse(data.data))
-        let log = data.data.filter((item) => {
-         
-          return item?.name === "Commercial Office"
-        })
-        console.log(log)
+        setData(data.data)
+     
     })
     
   },[])
@@ -34,7 +38,14 @@ function App() {
       <LandingPage />
       <ServicesBar />
       <Carousel data={data} />
-     
+      <CommercialOffice data={data} />
+      <CommercialLand data={data} />
+      <CommercialBuilding data={data} />
+      <IndustrialBuilding data={data} />
+      <CoWorkingSpace data={data}/>
+      <PrivateOffice data={data}/>
+      <MeetingRoom data={data} />
+      <Footer/>
     </div>
   );
 }
