@@ -35,11 +35,18 @@ const Search = () => {
               label="Looking for"
               onChange={() => {}}
             >
-              <MenuItem value={10} >
+              <MenuItem value={10} disabled >
                 Looking for
               </MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <MenuItem value={20}>Commercial Shop</MenuItem>
+              <MenuItem value={30}>Commercial Office</MenuItem>
+              <MenuItem value={30}>Commercial Land</MenuItem>
+              <MenuItem value={30}>Commercial Building</MenuItem>
+              <MenuItem value={30}>Industrial Building</MenuItem>
+              <MenuItem value={30}>Industrial Land</MenuItem>
+              <MenuItem value={30}>Co-working space</MenuItem>
+              <MenuItem value={30}>Private Office</MenuItem>
+              <MenuItem value={30}>Meeting Room</MenuItem>
             </Select>
           </FormControl>
         </Box>
@@ -54,9 +61,13 @@ const Search = () => {
               label="Select city"
               onChange={() => {}}
             >
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <MenuItem value={10}>Delhi</MenuItem>
+              <MenuItem value={20}>Noida</MenuItem>
+              <MenuItem value={30}>Hydrabad</MenuItem>
+              <MenuItem value={30}>Mumbai</MenuItem>
+              <MenuItem value={30}>Bangalore</MenuItem>
+              <MenuItem value={30}>Cochin</MenuItem>
+              <MenuItem value={30}>Chennai</MenuItem>
             </Select>
           </FormControl>
         </Box>
